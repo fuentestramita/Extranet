@@ -1,0 +1,263 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Extranet.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- End Required meta tags -->
+    <!-- Begin SEO tag -->
+    <title>EXTRANET TRAMITA.CL</title>
+    <meta property="og:title" content="Sign In">
+    <meta name="author" content="Beni Arisandi">
+    <meta property="og:locale" content="en_US">
+    <!-- End SEO tag -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-touch-icon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <!-- BEGIN BASE STYLES -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/fontawesome-all.min.css">
+    <!-- END BASE STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" href="assets/stylesheets/main.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/custom.css">
+    <!-- END THEME STYLES -->
+    <!-- End SEO tag -->
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-touch-icon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <meta name="theme-color" content="#3063A0">
+    <!-- End FAVICONS -->
+    <script src="assets/vendor/pace/pace.min.js"></script>
+    <!-- BEGIN BASE STYLES -->
+    <link rel="stylesheet" href="assets/vendor/pace/pace.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/open-iconic/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/fontawesome-all.min.css">
+    <!-- END BASE STYLES -->
+    <!-- BEGIN PLUGINS STYLES -->
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css">
+    <!-- END PLUGINS STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" href="assets/stylesheets/main.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/custom.css">
+    <!-- END THEME STYLES -->    
+  <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="onLoad();">
+    <!-- .app -->
+    <div class="app">
+      <!-- .app-header -->
+      <header class="app-header">
+        <!-- .top-bar -->
+        <div class="top-bar">
+          <!-- .top-bar-brand -->
+          <div class="top-bar-brand">
+            <a href="/home.aspx">
+              SCT - TRAMITA 
+            </a>
+          </div>
+          <!-- /.top-bar-brand -->
+          <!-- .top-bar-list -->
+          <div class="top-bar-list">
+            <!-- .top-bar-item -->
+            <div class="top-bar-item px-2 d-md-none d-lg-none d-xl-none">
+              <!-- toggle menu -->
+              <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="Menu" aria-controls="navigation">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+              <!-- /toggle menu -->
+            </div>
+            <!-- /.top-bar-item -->
+            <!-- .top-bar-item -->
+            <div class="top-bar-item top-bar-item-full">
+              <!-- .top-bar-search -->
+              <div class="top-bar-search">
+                <div class="input-group input-group-search">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <span class="oi oi-badge Size-24"></span>
+                    </span>
+                  </div>
+                  <asp:Label ID="lblNombreCliente" CssClass="nombre-cliente" style="padding-left:15px;" runat="server"></asp:Label>
+              </div>
+              <!-- /.top-bar-search -->
+            </div>
+            <!-- /.top-bar-item -->
+            <!-- .top-bar-item -->
+            <div class="top-bar-item top-bar-item-right px-0 d-none d-sm-flex">
+              <!-- .btn-account -->
+              <div class="dropdown">
+                <button class="btn-account d-none d-md-flex" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="account-summary pr-lg-4 d-none d-lg-block">
+                    <span class="account-name"><asp:Label ID="lblNombreUsuario" runat="server"></asp:Label> </span>
+                    <span class="account-description"><asp:Label ID="lblNombrePerfil" runat="server"></asp:Label></span>
+                  </span>
+                </button>
+                <!-- /.dropdown-menu -->
+              </div>
+              <!-- /.btn-account -->
+            </div>
+            <!-- /.top-bar-item -->
+          </div>
+          <!-- /.top-bar-list -->
+        </div>
+        <!-- /.top-bar -->
+      </header>
+      <!-- /.app-header -->
+      <!-- .app-aside -->
+      <aside class="app-aside">
+        <!-- .aside-content -->
+        <div class="aside-content">
+          <!-- .aside-menu -->
+          <section class="aside-menu has-scrollable">
+            <!-- .stacked-menu -->
+            <nav id="stacked-menu" class="stacked-menu">
+              <!-- .menu -->
+              <ul class="menu">
+                <!-- .menu-item -->
+                <li id="liMenuHome" class="menu-item" runat="server">
+                  <a href="/home.aspx" class="menu-link">
+                    <span class="menu-icon oi oi-dashboard"></span>
+                    <span class="menu-text">Home</span>
+                  </a>
+                </li>
+                <!-- /.menu-item -->
+                <li class="menu-header">ADMINISTRACIÓN</li>
+                <!-- .menu-item -->
+                <li id="liMenuActualizaBD" class="menu-item" runat="server" >
+                  <a href="admin/actualiza-bd.aspx" class="menu-link">
+                    <span class="menu-icon oi oi-browser"></span>
+                    <span class="menu-text" id="mnuActualizaBD" runat="server">Actualiza BD</span>
+                  </a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-infinity"></span>
+                    <span class="menu-text">Cambiar Clave</span>
+                  </a>
+                </li>
+                <li class="menu-header">CONSULTAS</li>
+                <!-- .menu-item -->
+                <li id="liMenuConsultaComercial" class="menu-item" runat="server">
+                  <a href="/consulta-comercial.aspx" class="menu-link">
+                    <span class="menu-icon oi oi-puzzle-piece"></span>
+                    <span class="menu-text">Consulta Comercial</span>
+                  </a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-people"></span>
+                    <span class="menu-text">Despacho Correo</span>
+                  </a>
+                </li>
+                <li class="menu-header">INTERFACES </li>
+                <!-- .menu-item -->
+                <li class="menu-item" >
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-pencil"></span>
+                    <span class="menu-text">Primera Inscripción</span>
+                  </a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-grid-two-up"></span>
+                    <span class="menu-text">Mera Tenencia</span>
+                  </a>
+                </li>
+                <!-- /.menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-bar-chart"></span>
+                    <span class="menu-text">Transferencia</span>
+                  </a>
+                  <!-- /child menu -->
+                </li>
+                <!-- /.menu-item -->
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-list-rich"></span>
+                    <span class="menu-text">Alzamiento</span>
+                  </a>
+                </li>
+                <!-- .menu-header -->
+                <li class="menu-header">SERVICIOS</li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-infinity"></span>
+                    <span class="menu-text">Carga Documentos</span>
+                  </a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-infinity"></span>
+                    <span class="menu-text">CAV</span>
+                  </a>
+                </li>
+                <!-- .menu-item -->
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <span class="menu-icon oi oi-infinity"></span>
+                    <span class="menu-text">Solicitud CAV</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- /.menu -->
+            </nav>
+            <!-- /.stacked-menu -->
+          </section>
+          <!-- /.aside-menu -->
+        </div>
+        <!-- /.aside-content -->
+      </aside>
+      <!-- /.app-aside -->
+      <!-- .app-main -->
+      <main class="app-main">
+        <form id="form1" runat="server" >
+            <div style="padding:25px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+      </main>
+      <!-- /.app-main -->
+    </div>
+    <!-- /.app -->
+    <!-- BEGIN BASE JS -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- END BASE JS -->
+    <!-- BEGIN PLUGINS JS -->
+    <script src="assets/vendor/stacked-menu/stacked-menu.min.js"></script>
+    <script src="assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="assets/vendor/chart.js/Chart.min.js"></script>
+    <!-- END PLUGINS JS -->
+    <!-- BEGIN THEME JS -->
+    <script src="assets/javascript/main.min.js"></script>
+    <!-- END THEME JS -->
+    <!-- BEGIN PAGE LEVEL JS -->
+    <script src="assets/javascript/pages/easypiechart-demo.js"></script>
+    <script src="assets/javascript/pages/dashboard-demo.js"></script>
+    <!-- END PAGE LEVEL JS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+			window.dataLayer = window.dataLayer || [];
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+/* put your own styles to customize and override the theme */
+.top-bar {
+	background-color: orangered !important;
+}
+
+.top-bar-brand {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 3.5rem;
+	width: 15rem;
+	padding: 0 .5rem 0 1rem;
+	background-color: #FF4500 !important;
+	font-family: Calibri;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.auth-header {
+	background-color: #FF4500 !important;
+}
+
+.form-control {
+	border-color: #FF4500 !important;
+}
+
+	.form-control:focus {
+		border-color: #cc3700 !important;
+		-webkit-box-shadow: 0 0 0 1px #cc3700 !important;
+		box-shadow: 0 0 0 1px #cc3700 !important;
+	}
+
+.btn-primary {
+	color: #fff;
+	background-color: #FF4500 !important;
+	border-color: #cc3700 !important;
+}
+
+	.btn-primary:hover {
+		color: #fff;
+		background-color: #cc3700 !important;
+		border-color: #cc3700 !important;
+	}
+
+.nombre-cliente {
+	font-family: Calibri;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.Size-24 {
+	font-size: 24px;
+}
+
+.stacked-menu > .menu > .menu-item.has-active > .menu-link {
+	color: #e53e00 !important;
+	font-weight: bold;
+}
+
+.menu-icon {
+	color: #e53e00 !important;
+}
+
+.stacked-menu .menu-link {
+	color: #666666 !important;
+}
+
+.cajablanca {
+	padding: 3rem 2rem 2rem;
+	max-width: 520px;
+	border-radius: .25rem;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 0 1px rgba(61, 70, 79, .05), 0 1px 3px 0 rgba(61, 70, 79, .15);
+	box-shadow: 0 0 0 1px rgba(61, 70, 79, .05), 0 1px 3px 0 rgba(61, 70, 79, .15);
+}
+
+.size-buscador {
+	width:15% !important;
+}
+
+
+.cssPaginamiento {
+	font-family: verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+}
+
+.cssPagina {
+	font-family: verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+}
+
+
+
+A.cssPagina {
+	font-family: verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: underline;
+}
+
+	A.cssPagina:Active {
+		font-family: verdana;
+		font-size: 10px;
+		font-weight: normal;
+		color: #666666;
+		text-decoration: underline;
+	}
+
+	A.cssPagina:visited {
+		font-family: verdana;
+		font-size: 10px;
+		font-weight: normal;
+		color: #666666;
+		text-decoration: underline;
+	}
+
+	A.cssPagina:hover {
+		font-family: verdana;
+		font-size: 10px;
+		font-weight: normal;
+		color: #333333;
+		text-decoration: underline;
+	}
+
+
+.cssHeaderGreen {
+	font-size: 11px;
+	color: #ffffff;
+	background-color: #6f9719;
+	font-family: verdana;
+	text-decoration: none;
+	font-weight: bold;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+
+
+
+
+.cssRowNone {
+	font-size: 11px;
+	color: #666666;
+	background-color: #e7e7e7;
+	font-family: verdana;
+	text-decoration: none;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-left: 4px;
+	padding-right: 4px;
+	white-space: nowrap;
+}
+
+
+.cssRowPair {
+	font-size: 11px;
+	color: #666666;
+	background-color: #f0f0f0;
+	font-family: verdana;
+	text-decoration: none;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-left: 4px;
+	padding-right: 4px;
+	white-space: nowrap;
+}
+
+
+.cssRowNoneGreen {
+	font-size: 11px;
+	color: #666666;
+	background-color: #dde7c4;
+	font-family: verdana;
+	text-decoration: none;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.cssRowPairGreen {
+	font-size: 11px;
+	color: #666666;
+	background-color: #e8f6d9;
+	font-family: verdana;
+	text-decoration: none;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+
+
+
+.cssRowError {
+	font-size: 11px;
+	color: #666666;
+	background-color: #fea9a9;
+	font-family: verdana;
+	text-decoration: none;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+
+.Rojo {
+	color: #ff0000;
+	font-size: 20px;
+}
+
+.Amarillo {
+	color: yellow;
+	font-size: 20px;
+}
+
+.Verde {
+	color: green;
+	font-size: 20px;
+}
+
+.Azul {
+	color: blue;
+	font-size: 20px;
+}
+
+.card-header {
+	background-color: #ffece5 !important;
+}
+.cssGridView{
+	border:0px;
+	border-style:hidden;
+	border-bottom:hidden !important;
+}
+
+.cssHide
+{
+	display:none;
+}
+.cssDisplayFlex {
+	display: flex;
+	/* align-items: center;*/
+}

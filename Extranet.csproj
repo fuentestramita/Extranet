@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,19 +70,276 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\actualiza-bd.aspx" />
+    <Content Include="assets\apple-touch-icon.png" />
+    <Content Include="assets\favicon.ico" />
+    <Content Include="assets\images\avatars\profile.jpg" />
+    <Content Include="assets\images\avatars\team1.jpg" />
+    <Content Include="assets\images\avatars\team2.png" />
+    <Content Include="assets\images\avatars\team3.png" />
+    <Content Include="assets\images\avatars\team4.jpg" />
+    <Content Include="assets\images\avatars\uifaces10 %281%29.jpg" />
+    <Content Include="assets\images\avatars\uifaces10.jpg" />
+    <Content Include="assets\images\avatars\uifaces11.jpg" />
+    <Content Include="assets\images\avatars\uifaces12.jpg" />
+    <Content Include="assets\images\avatars\uifaces13.jpg" />
+    <Content Include="assets\images\avatars\uifaces14.jpg" />
+    <Content Include="assets\images\avatars\uifaces15.jpg" />
+    <Content Include="assets\images\avatars\uifaces16.jpg" />
+    <Content Include="assets\images\avatars\uifaces17.jpg" />
+    <Content Include="assets\images\avatars\uifaces18.jpg" />
+    <Content Include="assets\images\avatars\uifaces19.jpg" />
+    <Content Include="assets\images\avatars\uifaces2.jpg" />
+    <Content Include="assets\images\avatars\uifaces20.jpg" />
+    <Content Include="assets\images\avatars\uifaces21.jpg" />
+    <Content Include="assets\images\avatars\uifaces3.jpg" />
+    <Content Include="assets\images\avatars\uifaces4.jpg" />
+    <Content Include="assets\images\avatars\uifaces5.jpg" />
+    <Content Include="assets\images\avatars\uifaces6.jpg" />
+    <Content Include="assets\images\avatars\uifaces7.jpg" />
+    <Content Include="assets\images\avatars\uifaces8.jpg" />
+    <Content Include="assets\images\avatars\uifaces9.jpg" />
+    <Content Include="assets\images\brand-inverse.png" />
+    <Content Include="assets\images\brand.png" />
+    <Content Include="assets\images\dummy\img-1.jpg" />
+    <Content Include="assets\images\dummy\img-2.jpg" />
+    <Content Include="assets\images\dummy\img-3.jpg" />
+    <Content Include="assets\images\dummy\img-4.jpg" />
+    <Content Include="assets\images\dummy\img-5.jpg" />
+    <Content Include="assets\images\dummy\img-6.jpg" />
+    <Content Include="assets\images\dummy\img-7.jpg" />
+    <Content Include="assets\images\dummy\img-8.jpg" />
+    <Content Include="assets\images\illustration\img-1.png" />
+    <Content Include="assets\images\illustration\img-2.png" />
+    <Content Include="assets\images\illustration\img-5.png" />
+    <Content Include="assets\images\illustration\img-7.png" />
+    <Content Include="assets\javascript\main.min.js" />
+    <Content Include="assets\javascript\pages\ace-demo.js" />
+    <Content Include="assets\javascript\pages\atwho-demo.js" />
+    <Content Include="assets\javascript\pages\chartjs-bar-demo.js" />
+    <Content Include="assets\javascript\pages\chartjs-line-demo.js" />
+    <Content Include="assets\javascript\pages\chartjs-others-demo.js" />
+    <Content Include="assets\javascript\pages\chartjs-radar-demo.js" />
+    <Content Include="assets\javascript\pages\chartjs-scatter-demo.js" />
+    <Content Include="assets\javascript\pages\colorpicker-demo.js" />
+    <Content Include="assets\javascript\pages\conversations-demo.js" />
+    <Content Include="assets\javascript\pages\cookieconsent-demo.js" />
+    <Content Include="assets\javascript\pages\dashboard-demo.js" />
+    <Content Include="assets\javascript\pages\datatables-demo.js" />
+    <Content Include="assets\javascript\pages\dataTables.bootstrap.js" />
+    <Content Include="assets\javascript\pages\easypiechart-demo.js" />
+    <Content Include="assets\javascript\pages\flatpickr-demo.js" />
+    <Content Include="assets\javascript\pages\flot-demo.js" />
+    <Content Include="assets\javascript\pages\jquery.flot.axislabels.min.js" />
+    <Content Include="assets\javascript\pages\jqvmap-demo.js" />
+    <Content Include="assets\javascript\pages\knob-demo.js" />
+    <Content Include="assets\javascript\pages\photoswipe-demo.js" />
+    <Content Include="assets\javascript\pages\plyr-demo.js" />
+    <Content Include="assets\javascript\pages\profile-demo.js" />
+    <Content Include="assets\javascript\pages\quill-demo.js" />
+    <Content Include="assets\javascript\pages\select2-demo.js" />
+    <Content Include="assets\javascript\pages\session-timeout-demo.js" />
+    <Content Include="assets\javascript\pages\simplemde-demo.js" />
+    <Content Include="assets\javascript\pages\slider-demo.js" />
+    <Content Include="assets\javascript\pages\sortable-nestable-demo.js" />
+    <Content Include="assets\javascript\pages\sparkline-demo.js" />
+    <Content Include="assets\javascript\pages\table-demo.js" />
+    <Content Include="assets\javascript\pages\tasks-demo.js" />
+    <Content Include="assets\javascript\pages\toastr-demo.js" />
+    <Content Include="assets\javascript\pages\treeview-demo.js" />
+    <Content Include="assets\javascript\pages\tribute-demo.js" />
+    <Content Include="assets\javascript\pages\typeahead-demo.js" />
+    <Content Include="assets\javascript\pages\uploader-demo.js" />
+    <Content Include="assets\javascript\pages\user-settings-demo.js" />
+    <Content Include="assets\stylesheets\custom.css" />
+    <Content Include="assets\stylesheets\main.min.css" />
+    <Content Include="assets\vendor\ace\min\ace.js" />
+    <Content Include="assets\vendor\ace\min\ext-statusbar.js" />
+    <Content Include="assets\vendor\ace\min\mode-javascript.js" />
+    <Content Include="assets\vendor\ace\min\theme-chrome.js" />
+    <Content Include="assets\vendor\ace\min\worker-javascript.js" />
+    <Content Include="assets\vendor\At.js\css\jquery.atwho.min.css" />
+    <Content Include="assets\vendor\At.js\js\jquery.atwho.min.js" />
+    <Content Include="assets\vendor\blueimp-canvas-to-blob\canvas-to-blob.min.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\jquery.fileupload-audio.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\jquery.fileupload-image.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\jquery.fileupload-process.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\jquery.fileupload-validate.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\jquery.fileupload-video.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\jquery.fileupload.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\jquery.iframe-transport.js" />
+    <Content Include="assets\vendor\blueimp-file-upload\js\vendor\jquery.ui.widget.js" />
+    <Content Include="assets\vendor\blueimp-load-image\js\load-image.all.min.js" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="assets\vendor\bootstrap-colorpicker\js\bootstrap-colorpicker.min.js" />
+    <Content Include="assets\vendor\bootstrap-session-timeout\bootstrap-session-timeout.min.js" />
+    <Content Include="assets\vendor\bootstrap-treeview\bootstrap-treeview.min.js" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="assets\vendor\Caret\jquery.caret.min.js" />
+    <Content Include="assets\vendor\chart.js\Chart.min.js" />
+    <Content Include="assets\vendor\cookieconsent\cookieconsent.min.css" />
+    <Content Include="assets\vendor\cookieconsent\cookieconsent.min.js" />
+    <Content Include="assets\vendor\datatables\extensions\buttons\buttons.bootstrap4.min.css" />
+    <Content Include="assets\vendor\datatables\extensions\buttons\buttons.bootstrap4.min.js" />
+    <Content Include="assets\vendor\datatables\extensions\buttons\buttons.html5.min.js" />
+    <Content Include="assets\vendor\datatables\extensions\buttons\buttons.print.min.js" />
+    <Content Include="assets\vendor\datatables\extensions\buttons\dataTables.buttons.min.js" />
+    <Content Include="assets\vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="assets\vendor\flatpickr\flatpickr.min.css" />
+    <Content Include="assets\vendor\flatpickr\flatpickr.min.js" />
+    <Content Include="assets\vendor\flot\jquery.flot.categories.min.js" />
+    <Content Include="assets\vendor\flot\jquery.flot.min.js" />
+    <Content Include="assets\vendor\flot\jquery.flot.resize.min.js" />
+    <Content Include="assets\vendor\flot\jquery.flot.time.min.js" />
+    <Content Include="assets\vendor\font-awesome\css\fontawesome-all.min.css" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="assets\vendor\handlebars\handlebars.min.js" />
+    <Content Include="assets\vendor\highlight-js\highlight.pack.js" />
+    <Content Include="assets\vendor\highlight-js\styles\mono-blue.css" />
+    <Content Include="assets\vendor\jquery-knob\jquery.knob.min.js" />
+    <Content Include="assets\vendor\jquery.easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="assets\vendor\jquery.sparkline\jquery.sparkline.min.js" />
+    <Content Include="assets\vendor\jquery\jquery.min.js" />
+    <Content Include="assets\vendor\jqvmap\jquery.vmap.min.js" />
+    <Content Include="assets\vendor\jqvmap\jqvmap.min.css" />
+    <Content Include="assets\vendor\jqvmap\maps\continents\jquery.vmap.europe.js" />
+    <Content Include="assets\vendor\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="assets\vendor\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="assets\vendor\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="assets\vendor\katex\katex.min.css" />
+    <Content Include="assets\vendor\katex\katex.min.js" />
+    <Content Include="assets\vendor\masonry-layout\masonry.pkgd.js" />
+    <Content Include="assets\vendor\masonry-layout\masonry.pkgd.min.js" />
+    <Content Include="assets\vendor\nestable2\jquery.nestable.min.js" />
+    <Content Include="assets\vendor\nouislider\nouislider.min.css" />
+    <Content Include="assets\vendor\nouislider\nouislider.min.js" />
+    <Content Include="assets\vendor\nouislider\wNumb.js" />
+    <Content Include="assets\vendor\open-iconic\css\open-iconic-bootstrap.min.css" />
+    <Content Include="assets\vendor\open-iconic\fonts\open-iconic.svg" />
+    <Content Include="assets\vendor\pace\pace.min.css" />
+    <Content Include="assets\vendor\pace\pace.min.js" />
+    <Content Include="assets\vendor\particles.js\particles.min.js" />
+    <Content Include="assets\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="assets\vendor\photoswipe\photoswipe-skin\default-skin.css" />
+    <Content Include="assets\vendor\photoswipe\photoswipe-ui-default.min.js" />
+    <Content Include="assets\vendor\photoswipe\photoswipe.css" />
+    <Content Include="assets\vendor\photoswipe\photoswipe.min.js" />
+    <Content Include="assets\vendor\plyr\plyr.css" />
+    <Content Include="assets\vendor\plyr\plyr.js" />
+    <Content Include="assets\vendor\quill\quill.min.css" />
+    <Content Include="assets\vendor\quill\quill.min.js" />
+    <Content Include="assets\vendor\select2\css\select2.min.css" />
+    <Content Include="assets\vendor\select2\js\select2.min.js" />
+    <Content Include="assets\vendor\simplemde\simplemde.min.css" />
+    <Content Include="assets\vendor\simplemde\simplemde.min.js" />
+    <Content Include="assets\vendor\Sortable\Sortable.min.js" />
+    <Content Include="assets\vendor\stacked-menu\stacked-menu.min.js" />
+    <Content Include="assets\vendor\toastr\toastr.min.css" />
+    <Content Include="assets\vendor\toastr\toastr.min.js" />
+    <Content Include="assets\vendor\tribute\tribute.css" />
+    <Content Include="assets\vendor\tribute\tribute.min.js" />
+    <Content Include="assets\vendor\typeahead.js\typeahead.bundle.min.js" />
+    <Content Include="consulta-comercial.aspx" />
+    <Content Include="getFile.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="sign-in.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\actualiza-bd.aspx.cs">
+      <DependentUpon>actualiza-bd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\actualiza-bd.aspx.designer.cs">
+      <DependentUpon>actualiza-bd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consulta-comercial.aspx.cs">
+      <DependentUpon>consulta-comercial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consulta-comercial.aspx.designer.cs">
+      <DependentUpon>consulta-comercial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="getFile.aspx.cs">
+      <DependentUpon>getFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="getFile.aspx.designer.cs">
+      <DependentUpon>getFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sign-in.aspx.cs">
+      <DependentUpon>sign-in.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sign-in.aspx.designer.cs">
+      <DependentUpon>sign-in.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\data\countries.json" />
+    <Content Include="assets\data\films\post_1960.json" />
+    <Content Include="assets\data\nba.json" />
+    <Content Include="assets\data\nfl.json" />
+    <Content Include="assets\data\nhl.json" />
+    <Content Include="assets\javascript\particles-comingsoon.json" />
+    <Content Include="assets\javascript\particles.json" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\vendor\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="assets\vendor\katex\fonts\KaTeX_Main-Regular.woff2" />
+    <Content Include="assets\vendor\katex\fonts\KaTeX_Math-Italic.ttf" />
+    <Content Include="assets\vendor\katex\fonts\KaTeX_Math-Italic.woff" />
+    <Content Include="assets\vendor\katex\fonts\KaTeX_Math-Italic.woff2" />
+    <Content Include="assets\vendor\open-iconic\fonts\open-iconic.eot" />
+    <Content Include="assets\vendor\open-iconic\fonts\open-iconic.otf" />
+    <Content Include="assets\vendor\open-iconic\fonts\open-iconic.ttf" />
+    <Content Include="assets\vendor\open-iconic\fonts\open-iconic.woff" />
     <None Include="packages.config" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\00 Utilities\00 Utilities.csproj">
+      <Project>{1e9da3f2-eb81-4b65-a9d8-75b3b3f805e1}</Project>
+      <Name>00 Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\02 BusinessLayer\02 BusinessLayer.csproj">
+      <Project>{455076b6-a740-49c5-9ef0-1e61298bc34c}</Project>
+      <Name>02 BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
